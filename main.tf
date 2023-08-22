@@ -11,7 +11,7 @@ resource "aws_subnet" "public_subnet" {
   
   vpc_id     = aws_vpc.my_vpc.id
   cidr_block = "10.0.${count.index}.0/24"
-  availability_zone = "us-east-1a" # Change to the desired AZ
+  availability_zone = "us-east-1" # Change to the desired AZ
   map_public_ip_on_launch = true
   
   tags = {
