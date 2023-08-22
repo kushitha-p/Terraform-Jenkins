@@ -2,11 +2,11 @@ provider "aws" {
     region = "ap-southeast-2"  
 }
 
-resource "aws_instance" "foo" {
-  ami           = "ami-0310483fb2b488153" # ap-southeast-2
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "my_bucket" {
+  bucket = "kushitha8639"
+  acl    = "private"
+
   tags = {
-      Name = "first-inst"
+      Name = "My s3 bucket"
   }
 }
-
